@@ -38,8 +38,8 @@
     },
     {
       "path": "VALIDATION.md",
-      "bytes": 2828,
-      "sha256": "fce414360795d793ef415cf004dac391fa9504753ec4f493983ca53794f001d9"
+      "bytes": 2904,
+      "sha256": "65edf8ad8bd900d16bcb916059a4e312f11442f5217b50c3c4673bfedf5f0f23"
     },
     {
       "path": "agents/openai.yaml",
@@ -48,8 +48,8 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 688,
-      "sha256": "28a8e1a1d9a7e393779059cff25d5c64bf292865f4f0218d6a58e4b02e44f8ad"
+      "bytes": 966,
+      "sha256": "da867cd94fc08fc73d49b63b88ffb665ae7e8a1fc75f35e209b1a53f3a3538a2"
     },
     {
       "path": "references/review.md",
@@ -63,8 +63,8 @@
     },
     {
       "path": "requirements-lock.txt",
-      "bytes": 49079,
-      "sha256": "19ab4b7400821eaf79f655609a544bc4ed5e3007957786f67ef13e79d6039825"
+      "bytes": 50979,
+      "sha256": "501b35d6033a739d03a9361efe7665094f81b2682aefff040fddab5b93632c73"
     },
     {
       "path": "scripts/pack_release.py",
@@ -108,8 +108,8 @@
     },
     {
       "path": "tests/test_core.py",
-      "bytes": 3622,
-      "sha256": "8bb8cd034d25e0dceb09e5400538c88dc3b72bbde3bf028310d7378a7bdfd2a8"
+      "bytes": 3654,
+      "sha256": "b4b13aca2aaecc36d509c13af7c57650d83b7f2c97ae4bfe330405b052e46b20"
     },
     {
       "path": "tests/test_mcp.py",
@@ -123,8 +123,8 @@
     },
     {
       "path": "tests/test_review.py",
-      "bytes": 5659,
-      "sha256": "79cbe0933b0cef8999398c5084719ec7714ae7fc52a8d04c04343721022bb5b0"
+      "bytes": 5821,
+      "sha256": "e4288b682651f236c0b27fc7b276da95e3cd7d4970351d97d4599f78d54b7973"
     },
     {
       "path": "tests/test_transcribe.py",
@@ -133,8 +133,8 @@
     },
     {
       "path": "uv.lock",
-      "bytes": 181847,
-      "sha256": "7411fcc1551a1e205bfb8dfbca119adcf584abb3e04746b69d473657f0c85d08"
+      "bytes": 192091,
+      "sha256": "8b23a5e9e8241dbd83513d781308ac0395cd10e29813a63aa1af2cae1fd0bd73"
     },
     {
       "path": "video_copy_extractor/__init__.py",

@@ -40,18 +40,18 @@ class ApplyReviewTests(unittest.TestCase):
 
     def test_preserves_repetition_short_numbers_and_spaces(self):
         self.run_review()
-        self.assertEqual((self.output / "transcript.txt").read_text(), "  123  \n再见\n再见\n")
+        self.assertEqual((self.output / "transcript.txt").read_text(encoding="utf-8"), "  123  \n再见\n再见\n")
         self.assertEqual(len(list(self.output.iterdir())), 4)
 
     def test_edit_exactly_one_segment_with_hash_and_no_accuracy_claim(self):
         self.review.update(edits=[self.edit()], accuracy_verified=True)
         self.run_review()
-        report = json.loads((self.output / "review.json").read_text())
+        report = json.loads((self.output / "review.json").read_text(encoding="utf-8"))
         self.assertFalse(report["accuracy_verified"])
         self.assertEqual(report["raw_sha256"], hashlib.sha256(self.raw_path.read_bytes()).hexdigest())
         self.assertEqual(report["raw_source"], self.raw_path.name)
-        self.assertEqual((self.output / "transcript.txt").read_text(), "  123  \n再见。\n再见\n")
-        self.assertIn("[00:00:01.200 --> 00:00:02.400] 再见。", (self.output / "transcript_timed.txt").read_text())
+        self.assertEqual((self.output / "transcript.txt").read_text(encoding="utf-8"), "  123  \n再见。\n再见\n")
+        self.assertIn("[00:00:01.200 --> 00:00:02.400] 再见。", (self.output / "transcript_timed.txt").read_text(encoding="utf-8"))
 
     def test_before_mismatch_rejected(self):
         self.review["edits"] = [self.edit(before="再见 ")]
@@ -82,16 +82,16 @@ class ApplyReviewTests(unittest.TestCase):
         self.review["edits"] = [self.edit(after="", reason="短片段复核确认重复解码",
                                           evidence=["tail.wav 独立转写", "字幕帧 3"])]
         self.run_review()
-        self.assertEqual((self.output / "transcript.txt").read_text(), "  123  \n再见\n")
-        self.assertNotIn("[00:00:01.200 -->", (self.output / "transcript_timed.txt").read_text())
+        self.assertEqual((self.output / "transcript.txt").read_text(encoding="utf-8"), "  123  \n再见\n")
+        self.assertNotIn("[00:00:01.200 -->", (self.output / "transcript_timed.txt").read_text(encoding="utf-8"))
 
     def test_uncertainty_is_separate_and_timestamped(self):
         self.review["uncertainties"] = [{"segment_id": 2, "note": "读音不清，需复听"}]
         self.run_review()
-        body, notes = (self.output / "transcript.md").read_text().split("## 待核对")
+        body, notes = (self.output / "transcript.md").read_text(encoding="utf-8").split("## 待核对")
         self.assertNotIn("读音不清", body)
         self.assertIn("00:00:02.400–00:00:03.000 （片段 2）：读音不清", notes)
-        self.assertNotIn("读音不清", (self.output / "transcript.txt").read_text())
+        self.assertNotIn("读音不清", (self.output / "transcript.txt").read_text(encoding="utf-8"))
 
     def test_duplicate_uncertainty_rejected(self):
         self.review["uncertainties"] = [{"segment_id": 1, "note": "需复听"}] * 2
@@ -100,10 +100,10 @@ class ApplyReviewTests(unittest.TestCase):
     def test_existing_directory_is_never_overwritten(self):
         self.output.mkdir(parents=True)
         sentinel = self.output / "transcript.txt"
-        sentinel.write_text("现有结果")
+        sentinel.write_text("现有结果", encoding="utf-8")
         with self.assertRaises(FileExistsError):
             self.run_review()
-        self.assertEqual(sentinel.read_text(), "现有结果")
+        self.assertEqual(sentinel.read_text(encoding="utf-8"), "现有结果")
         self.assertEqual(list(self.output.iterdir()), [sentinel])
 
     def test_empty_raw_is_not_successful_transcription(self):

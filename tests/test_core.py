@@ -26,8 +26,8 @@ class CoreTests(unittest.TestCase):
         self.assertFalse(result["accuracy_verified"])
         self.assertFalse(result["completeness_verified"])
         self.assertIn("overlapping_cues", result["warnings"])
-        self.assertEqual(len(json.loads((out / "raw.json").read_text())["segments"]), 2)
-        self.assertEqual(json.loads((out / "text/review.json").read_text())["raw_source"], "raw.json")
+        self.assertEqual(len(json.loads((out / "raw.json").read_text(encoding="utf-8"))["segments"]), 2)
+        self.assertEqual(json.loads((out / "text/review.json").read_text(encoding="utf-8"))["raw_source"], "raw.json")
 
     def test_failure_cleans_partial_results_and_preserves_prior_job(self):
         first = core.extract_local(self.caption, output_root=self.root / "jobs")

@@ -22,3 +22,10 @@ video-copy-extractor = "video_copy_extractor.__main__:main"
 
 [tool.setuptools.packages.find]
 include = ["video_copy_extractor*"]
+
+[tool.uv]
+# Keep Intel macOS on releases with compatible binary wheels.
+constraint-dependencies = [
+    "cryptography==48.0.1 ; sys_platform == 'darwin' and platform_machine == 'x86_64'",
+    "onnxruntime==1.23.2 ; sys_platform == 'darwin' and platform_machine == 'x86_64'",
+]
