@@ -1,0 +1,6 @@
+interface:
+  display_name: "视频文案提取"
+  short_description: "从抖音、小红书和YouTube提取原始文案，保留时间戳与校对依据"
+  default_prompt: "请用 $video-copy-extractor 提取这个视频的完整口播文案，保留原文并核对疑点。"
+policy:
+  allow_implicit_invocation: true

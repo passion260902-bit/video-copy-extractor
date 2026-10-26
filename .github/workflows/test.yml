@@ -1,0 +1,31 @@
+name: Cross-platform checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, macos-15-intel]
+        python: ['3.11', '3.13']
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install hash-locked binary dependencies
+        run: python -m pip --isolated install --index-url https://pypi.org/simple --only-binary=:all: --require-hashes -r requirements-lock.txt
+      - name: Offline behavior and MCP tests
+        run: python -m unittest discover -s tests -v
+      - name: Public archive privacy scan
+        run: python scripts/pack_release.py --check
+      - name: Environment smoke check
+        run: python scripts/vce.py doctor

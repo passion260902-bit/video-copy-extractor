@@ -1,0 +1,187 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 119,
+      "sha256": "61edf237223d5f113d9a2b99c69e13cea409a3124ac19e692f20508d6fe0f5b2"
+    },
+    {
+      "path": ".github/workflows/test.yml",
+      "bytes": 1069,
+      "sha256": "60722884523af1aee7b15df8c8822ce753c7bac8b6a653fff092224b514d9207"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 363,
+      "sha256": "da01ea8d08b391d3be53ddbcacd8b6a7b34ccc59a638058b09e91a28f13bb499"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1090,
+      "sha256": "dda2561b54980e4265e210993ba88bcee33a30d53819faca1b51cd2b848cd5fd"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8961,
+      "sha256": "207af60f8eca474d09b76b0570356e658e8c7926fc29e7629ee5a2996cdf47cc"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 2786,
+      "sha256": "815afb96e5d640f960e215c504a05488223d3a0236997aedd21330d4a0d99cc5"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "bytes": 1809,
+      "sha256": "1000e1d914a19eefec9727662cb69261c677e79258d206f905bb3bfd29ea9f86"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 2828,
+      "sha256": "fce414360795d793ef415cf004dac391fa9504753ec4f493983ca53794f001d9"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 318,
+      "sha256": "3f5407f7be7a3ba9d51c80c70b0b434c4c87cae03e60d0a63722f227c8886db6"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 688,
+      "sha256": "28a8e1a1d9a7e393779059cff25d5c64bf292865f4f0218d6a58e4b02e44f8ad"
+    },
+    {
+      "path": "references/review.md",
+      "bytes": 1448,
+      "sha256": "e478997091404e515c7254b96e503d404caebee6e5faee102d0ca116df3f0ef2"
+    },
+    {
+      "path": "release-files.txt",
+      "bytes": 847,
+      "sha256": "571eda4a22fa77c86d4afd79147377d2ab8155b7d062967e322902ff6be30d29"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "bytes": 49079,
+      "sha256": "19ab4b7400821eaf79f655609a544bc4ed5e3007957786f67ef13e79d6039825"
+    },
+    {
+      "path": "scripts/pack_release.py",
+      "bytes": 4031,
+      "sha256": "b101fd96fe78869639d0716701d76e95f8ebd6a8765eea020a97581f602ce3f7"
+    },
+    {
+      "path": "scripts/setup_runtime.py",
+      "bytes": 1294,
+      "sha256": "0f407d0fba076b75be622d5fdd1765a4ac9688585374cba5d59d7803048fcfc5"
+    },
+    {
+      "path": "scripts/vce.py",
+      "bytes": 305,
+      "sha256": "f101ba20b6f573be06ad2bfadb43d3cf8bfbb34a3a37e7d3ea71935781798ef6"
+    },
+    {
+      "path": "setup-macos.command",
+      "bytes": 399,
+      "sha256": "5f312a315de7e65977e01a7ef6c6d468e132e126fbd6d09f3900e56d3d68d597"
+    },
+    {
+      "path": "setup-windows.cmd",
+      "bytes": 465,
+      "sha256": "af1c9b8844fa3b6d95a2eb62e0b901b94717207e936d8462e8dafad4681acd0f"
+    },
+    {
+      "path": "tests/test_acquire.py",
+      "bytes": 15469,
+      "sha256": "dc7a112592665b62d27376f77ccaef71702e5b4ed953a460ec1a7f34ab5ee56a"
+    },
+    {
+      "path": "tests/test_browser.py",
+      "bytes": 3279,
+      "sha256": "6097b782c0a50c559ef57a98f2c03a15cd890423de260c62d2d57f46d97a3245"
+    },
+    {
+      "path": "tests/test_captions.py",
+      "bytes": 5302,
+      "sha256": "8f7a7c3c24531ed81f46952078e209a2b289e5e9cf85a5787e6988655f88793f"
+    },
+    {
+      "path": "tests/test_core.py",
+      "bytes": 3622,
+      "sha256": "8bb8cd034d25e0dceb09e5400538c88dc3b72bbde3bf028310d7378a7bdfd2a8"
+    },
+    {
+      "path": "tests/test_mcp.py",
+      "bytes": 11885,
+      "sha256": "d010805c09eb694aeb29683e191744c91a7b8d57bbf4a0d41cdd9470b76417de"
+    },
+    {
+      "path": "tests/test_packaging.py",
+      "bytes": 2472,
+      "sha256": "16985f80d9ea5d283d0ec8f884c45cc9f5ae83cf53c5cbf8c5b3335c92371ea1"
+    },
+    {
+      "path": "tests/test_review.py",
+      "bytes": 5659,
+      "sha256": "79cbe0933b0cef8999398c5084719ec7714ae7fc52a8d04c04343721022bb5b0"
+    },
+    {
+      "path": "tests/test_transcribe.py",
+      "bytes": 7082,
+      "sha256": "0a336028b98dbfbcf9b62c3434fba106eb114180658e68cfa911396663f928bb"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 181847,
+      "sha256": "7411fcc1551a1e205bfb8dfbca119adcf584abb3e04746b69d473657f0c85d08"
+    },
+    {
+      "path": "video_copy_extractor/__init__.py",
+      "bytes": 80,
+      "sha256": "3982d76bd634d41e1338b5fd8806b76769a680d2ccee602c0f4b8cb019c15e2c"
+    },
+    {
+      "path": "video_copy_extractor/__main__.py",
+      "bytes": 5539,
+      "sha256": "6bd73adf8a94e9305541c64a00a5a3a600072315c8a6d542f5f009e49b4ed1c4"
+    },
+    {
+      "path": "video_copy_extractor/acquire.py",
+      "bytes": 18074,
+      "sha256": "a56e5027ffc329048aaa5bbe3ebdd814b734570d9371d5e0f0562b1095090a43"
+    },
+    {
+      "path": "video_copy_extractor/browser.py",
+      "bytes": 9257,
+      "sha256": "ac5df80b603bc10c0e44657fe901dcb778d6fb13445f09ee9e51ea0c8c42fa15"
+    },
+    {
+      "path": "video_copy_extractor/captions.py",
+      "bytes": 7724,
+      "sha256": "4c9239ed4750dc283abf0a01f22d9b1e5946ecef99fecb1f481efed42222a1ab"
+    },
+    {
+      "path": "video_copy_extractor/core.py",
+      "bytes": 6337,
+      "sha256": "c07bd5176e8731350d51379074e6c61fa6e206ba7b7ccde1a91a920200e7b3d3"
+    },
+    {
+      "path": "video_copy_extractor/mcp_server.py",
+      "bytes": 9037,
+      "sha256": "dd522385cdd04f9cd804ce15d3ad427b92305946391803c98119089345927957"
+    },
+    {
+      "path": "video_copy_extractor/review.py",
+      "bytes": 6296,
+      "sha256": "bcd626969f981f7dd5d0974166a7d0e0fea0fab37a039ab807d32c89488b7076"
+    },
+    {
+      "path": "video_copy_extractor/transcribe.py",
+      "bytes": 5963,
+      "sha256": "7240cc26b61e15de4d410944302265619a29e31d39d70ca6b0c67049b7a02f57"
+    }
+  ],
+  "scan": "allowlist_and_pattern_scan_passed",
+  "not_a_security_guarantee": true
+}

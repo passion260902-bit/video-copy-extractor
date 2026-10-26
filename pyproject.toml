@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=75,<82"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video-copy-extractor"
+version = "0.1.0"
+description = "Local-first video transcript extraction for Douyin, Xiaohongshu and YouTube"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "MIT"
+dependencies = ["yt-dlp==2026.8.19"]
+
+[project.optional-dependencies]
+asr = ["faster-whisper==1.2.1"]
+mcp = ["mcp>=1.27,<2"]
+browser = ["playwright>=1.56,<2"]
+all = ["faster-whisper==1.2.1", "mcp>=1.27,<2", "playwright>=1.56,<2"]
+
+[project.scripts]
+video-copy-extractor = "video_copy_extractor.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["video_copy_extractor*"]
