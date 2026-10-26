@@ -22,7 +22,8 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - name: Install hash-locked binary dependencies
-        run: python -m pip --isolated install --index-url https://pypi.org/simple --only-binary=:all: --require-hashes -r requirements-lock.txt
+        run: >-
+          python -m pip --isolated install --index-url https://pypi.org/simple --only-binary=:all: --require-hashes -r requirements-lock.txt
       - name: Offline behavior and MCP tests
         run: python -m unittest discover -s tests -v
       - name: Public archive privacy scan
